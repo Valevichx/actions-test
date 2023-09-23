@@ -22,6 +22,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a Python script
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
         run: python .github/workflows/example.py
 
       # Runs a set of commands using the runners shell
